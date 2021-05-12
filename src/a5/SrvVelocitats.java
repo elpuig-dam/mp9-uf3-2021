@@ -19,7 +19,7 @@ public class SrvVelocitats {
 		 socket = new MulticastSocket(portValue);
 		 multicastIP = InetAddress.getByName(strIp);
 		 port = portValue;
-		 simulator = new Velocitat(100);
+		 simulator = new Velocitat(200);
 	}
 	
 	public void runServer() throws IOException{
@@ -45,7 +45,7 @@ public class SrvVelocitats {
 	public static void main(String[] args) throws IOException {
 		//Canvieu la X.X per un número per formar un IP.
 		//Que no sigui la mateixa que la d'un altre company
-		SrvVelocitats srvVel = new SrvVelocitats(5557, "224.0.X.X");
+		SrvVelocitats srvVel = new SrvVelocitats(5557, "224.0.10.10");
 		srvVel.runServer();
 		System.out.println("Parat!");
 
